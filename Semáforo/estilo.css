@@ -1,0 +1,41 @@
+/* estilo.css */
+
+body {
+    background-color: darkgray;
+  }
+  
+  .semaforo {
+    width: 150px;
+    height: 300px;
+    background-color: black;
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .luz {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: grey;
+    opacity: 0.3;
+  }
+  
+  .vermelho.ativa {
+    background-color: red;
+    opacity: 1;
+  }
+  
+  .amarelo.ativa {
+    background-color: yellow;
+    opacity: 1;
+  }
+  
+  .verde.ativa {
+    background-color: green;
+    opacity: 1;
+  }
+  

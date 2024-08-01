@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Senac</title>
+  <link rel="stylesheet" href="estilo.css">
+</head>
+
+<body>
+
+  <div class="semaforo">
+    <div class="luz vermelho" id="vermelho"></div>
+    <div class="luz amarelo" id="amarelo"></div>
+    <div class="luz verde" id="verde"></div>
+  </div>
+
+  <script>
+    function acenderLuz(cor) {
+      document.getElementById('vermelho').classList.remove('ativa');
+      document.getElementById('amarelo').classList.remove('ativa');
+      document.getElementById('verde').classList.remove('ativa');
+
+      document.getElementById(cor).classList.add('ativa');
+    }
+
+    function cicloSemaforo() {
+      setTimeout(() => acenderLuz('vermelho'), 0);
+      setTimeout(() => acenderLuz('amarelo'), 3000);
+      setTimeout(() => acenderLuz('verde'), 6000);
+      setTimeout(cicloSemaforo, 9000);
+    }
+    cicloSemaforo();
+  </script>
+
+</body>
+
+</html>
